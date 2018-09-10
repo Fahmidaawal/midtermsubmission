@@ -12,25 +12,24 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
-		int i = 0;
-		int number = 0;
-		String PrimeNumbers = "";
-		for (i = 2; i <= 1000000; i++) {
-			int counter = 0;
-			for (number = i; number >= 2; number--) {
-				if (i%number == 0) {
-					counter = counter + 2;
+		//String PrimeNumbers = "";
+        int counter = 0;
 
-				}
-				if (counter == 2) {
-					PrimeNumbers = PrimeNumbers + i + " ";
-				}
-			}
-			System.out.println("Primenumbers from number 2 to 1000000 is");
-			System.out.println(PrimeNumbers);
+		for (int i = 2; i < 1000000; i++) {
+            if (i == 2) {
+                System.out.println(i);
+            } else {
+                if( isPrime(i)){
+                    counter++;
+                    System.out.println("prime: "+ i);
+                    }
+                }
 
+            }
 
-		}
+	} public  static  boolean isPrime( int y){
+	    if( y%2 == 0) return false;
 
-	}
+        return  true;
+    }
 }
