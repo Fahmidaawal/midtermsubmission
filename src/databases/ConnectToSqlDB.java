@@ -167,7 +167,7 @@ public class ConnectToSqlDB {
         try {
             connectToSqlDatabase();
                 ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName1 + "," + columnName2 + " ) VALUES(?,?)");
-                ps.setString(1,"Ankita Sing");
+                ps.setString(1,"Shama");
                 ps.setInt(2,3590);
                 ps.executeUpdate();
 
@@ -180,6 +180,7 @@ public class ConnectToSqlDB {
             e.printStackTrace();
         }
     }
+
 
     public static List<User> readUserProfileFromSqlTable()throws IOException, SQLException, ClassNotFoundException{
         List<User> list = new ArrayList<>();
@@ -214,6 +215,25 @@ public class ConnectToSqlDB {
         List<User> list = readUserProfileFromSqlTable();
         for(User user:list){
             System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+        }
+
+    }
+    public void InsertDataFromStringToMySql(String ArrayData, String tableName,String columnName){
+
+        try {
+            connectToSqlDatabase();
+            ps = connect.prepareStatement("INSERT INTO "+tableName+" ( " + columnName + " ) VALUES(?)");
+            ps.setString(1,ArrayData);
+
+            ps.executeUpdate();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

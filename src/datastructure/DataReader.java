@@ -1,5 +1,10 @@
 package datastructure;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Stack;
+
 public class DataReader {
 
 	public static void main(String[] args) {
@@ -19,6 +24,28 @@ public class DataReader {
 		 */
 
 		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		BufferedReader br = null;
+		try{
+			br = new BufferedReader(new FileReader(textFile));
+
+		}catch (FileNotFoundException e){
+			e.printStackTrace();
+
+		}
+		String text;
+		while ((text = br.readLine())!= null){
+			System.out.println(text);
+		}
+		Stack<String> wrdMap = new Stack<String>();
+		String[] splitWord = textFile.split(" ");
+
+		for(String word: splitWord){
+			Integer count = wrdMap.indexOf(splitWord);
+			if(count == null){
+				count = 0;
+			} wrdMap.add(word);
+		} wrdMap.push(textFile);
+		System.out.println(wrdMap);
 
 
 

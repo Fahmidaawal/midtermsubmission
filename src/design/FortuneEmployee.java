@@ -1,5 +1,10 @@
 package design;
 
+import databases.ConnectToMongoDB;
+import databases.ConnectToSqlDB;
+
+import java.util.List;
+
 public class FortuneEmployee {
 
 	/**
@@ -27,6 +32,18 @@ public class FortuneEmployee {
 
 		EmployeeInfo.calculateEmployeeBonus(120000,2);
 		EmployeeInfo.calculateEmployeePension(240000);
+
+		ConnectToMongoDB connectToMongoDB = new ConnectToMongoDB();
+
+
+		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+
+		connectToSqlDB.insertProfileToSqlTable("employee_record","employee_ID","employee_info");
+		List<String> name = connectToSqlDB.readDataBase("employee_record","employee_ID");
+		for(String st : name){
+			System.out.println(st);
+		}
+
 	}
 		
 
