@@ -23,7 +23,7 @@ public class DataReader {
 		 * Use For Each loop/while loop/Iterator to retrieve data.
 		 */
 
-		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		/*String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
 		BufferedReader br = null;
 		try{
 			br = new BufferedReader(new FileReader(textFile));
@@ -46,7 +46,7 @@ public class DataReader {
 			} wrdMap.add(word);
 		} wrdMap.push(textFile);
 		System.out.println(wrdMap);
-
+*/
 
 
 	}
