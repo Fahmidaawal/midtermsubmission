@@ -26,7 +26,7 @@ public class UseArrayList {
 		System.out.println("Peek first element :"+ Students.get(0));
 
 
-		System.out.println("Remove element at index 1:"+ Students.remove(2));
+		System.out.println("Remove element at index 3:"+ Students.remove(3));
 
 		System.out.println("Re-retrieving elements from ArrayList:" + Students);
 

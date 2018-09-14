@@ -123,33 +123,119 @@ A.Java Development Kit (JDK) is Kit which provides the environment to develop an
   Java Virtual machine(JVM) is a very important part of both JDK and JRE because it is contained or inbuilt in both.
 
 What is the difference between JVM and JRE?
+A. The Java Runtime Environment(JRE) provides the minimum requirements for executing a Java application.
+    Java Virtual Machine (JVM)it is a specification that provides a runtime environment in which Java bytecode can be executed.
+    It can also run those programs which are written in other languages and compiled to Java bytecode.
 What is compile time and run time?
+A. Java compile the .java file to .class file, this stage is called compile time.
+   java loader loads the .class file in JVM and JVM executes the application.
+   This execution time of a application is called run time.
 What is heap?
+A. Runtime data area from which memory for all class instances and arrays are located.
+
 How java manage it's memory?
+A.Java objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease
+  in size while the application runs.
+
 What is the difference between String, StringBuffer and StringBuilder?
+A.String is immutable, if you try to alter their values, another object getscreated, whereas
+  StringBuffer and StringBuilder are mutable so they can change their values.StringBuffer methods are
+  synchronized while StringBuilder methods are non-synchronized, it means that for thread-safe operations
+  you must choose StringBuffer class instead of StringBuilder.
+
 What is Singleton class?
+A.Singleton class is to control object creation by keeping private constructor
+
 What is Serialization and Deserialization?
+A. Serialization is a process of converting an object into a sequence of bytes which can be persisted to a disk or
+   database or can be sent through streams. The reverse process of creating object from sequence of bytes is called deserialization
+
 when to use transient variable in java?
+A.the transient keyword to indicate to the Java virtual machine that the indicated variable is not part of the persistent state of the object.
+
 Difference between while and do..while loop?
+A. Contrast with the while loop, which tests the condition before the code within the block is executed,
+   the do-while loop is an exit-condition loop. This means that the code must always be executed first and
+   then the expression or test condition is evaluated. If it is true, the code executes the body of the loop again.
+
 What is Enum?
+A.Enum is a special Java type used to define collections of constants.
+  More precisely, a Java enum type is a special kind of Java class. An enum can contain constants, methods etc.
+
 What is Iterator?
+A. An iterator is an object that represents a stream of data
+
 Which one will take more memory, an int or Integer?
+A.int and Integer both represents same number of values.
+
 Why is String Immutable in Java?
+A.string objects are immutable. Immutable simply means unmodifiable or unchangeable.
+ Once string object is created its data or state can't be changed but a new string object is created.
+
 What is constructor chaining in Java?
+A.Constructor chaining is the process of calling one constructor from another constructor with respect to current object
+
 The difference between Serial and Parallel Garbage Collector?
+A.Serial Collector is mostly designed for single-threaded environments.
+  Parallel Garbege Collector is used for multi-threaded environments.
+
 What is JIT stands for?
+A. Just In Time Operator
+
 Explain Java Heap space and Garbage collection?
+A.Java objects reside in an area called the heap. The heap is created when the JVM starts up and may increase or decrease in size while the application runs.
+  Garbage collection is the process of looking at heap memory, identifying which objects are in use and which are not, and deleting the unused objects.
+
 Can you guarantee the garbage collection process?
+A. NO
 What is the difference between stack and heap in Java?
+A.When an object is created its stored in the heap
+   -->Stack creates a memory to the created object
+   -->Stack is used for static memory allocation and Heap for dynamic memory allocation.
+   -->Both stored in the computer's RAM.
+   -->Variables allocated on the stack are stored directly to the memory and access to this memory is very fast,
+   -->The stack is always reserved in a Last In First Out (LIFO) order, the most recently reserved block is always the next block to be freed.
+   -->This makes it really simple to keep track of the stack, freeing a block from the stack is nothing more than adjusting one pointer.
+   -->Variables allocated on the heap have their memory allocated at run time and accessing this memory is a bit slower,
+   -->The heap size is only limited by the size of virtual memory.
+
 What is reflection in java and why is it useful?
+A. Reflection is used to describe code which is able to ispect other code in the same system. it help the user gain
+insight and see how to move foward.
+
 what is multithreading in java?
+A. It is the process that we use to execute multiple threads simultaneously.
+
 What is the use of synchronization in Java?
+A. Is used to provide mutually exclusive acces to a shared resource with multiple java threads.
+
 What is Framework?
+A. A framework is nothing but large bodies of java codes where you can apply your own code to solve problems in the
+specific domain.
+
 What are the testing Framework available in java?
+A. Selenium
+   testNG
+   JUnit
+   Cucumber
+   DB Unit.
+
 Difference between jUnit and testNG?
+A. The main difference is the scope and dependency.
+
 What are the dependencies for this project?
+A. The dependecies are:
+   mongo-java-driver-3.4.0.jar
+   mysql-connector-java-5.1.41-bin.jar
+
 what is dependency injection in java?
+A. This means that if I create an file or program with some dependencies I also include the dependencies on the project
+so if another user try to acces to it, it has the dependencies already in it.
+
 What is static binding and dynamic binding?
+A.The binding which can be resolved at compile time by compiler is known as static or early binding. Binding of all
+  the static, private and final methods is done at compile-time.
+
 
 
 

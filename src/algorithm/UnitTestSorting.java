@@ -20,6 +20,48 @@ public class UnitTestSorting {
         }catch(Exception ex){
             ex.getMessage();
         }
+        // bubble sort
+        unSortedArray = new int[]{6,9,2,5,1,0,4};
+        sort.bubbleSort( unSortedArray);
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+        // insertion sort
+
+        unSortedArray = new int[]{6,9,2,5,1,0,4};
+        sort.insertionSort(unSortedArray);
+        try {
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+        }catch(Exception ex){
+            ex.getMessage();
+        }
+
+
+        //quick sort
+        unSortedArray = new int[]{6,9,2,5,1,0,4};
+
+        sort.quickSort(unSortedArray,0,unSortedArray.length-1);
+
+        try {
+
+            Assert.assertEquals(sortedArray, unSortedArray, "Array is not Sorted");
+
+        }catch(Exception ex){
+
+            ex.getMessage();
+
+        }
+
+
+
+
+
+
+
+
 
         //Now implement Unit test for rest of the soring algorithm...................below
 

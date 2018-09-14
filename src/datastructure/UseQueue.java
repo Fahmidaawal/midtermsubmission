@@ -17,6 +17,7 @@ public class UseQueue {
 		color.add("BLACK");
 		color.add("BLUE");
 		color.add("WHITE");
+
 		System.out.println("peek :" + color.peek());
 		System.out.println("remove :" + color.remove());
 		System.out.println("poll :" + color.poll());
